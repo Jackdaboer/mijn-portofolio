@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>Boodschappenlijstje</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="font/css/fontello.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    
+  </head>
+  <body>
+    <div class="navbar">
+    	<div class="navbar-inner">
+			  <div class="container"> 
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          </a> <a class="brand" href="../index.html">
+				  <!--AANPASSING-->
+          <img src="../img/foto.jpg" alt="" style="width:64px"></a>
+				  <ul class="nav nav-collapse pull-right">
+            <li><a href="../index.html" class="active"><i class="icon-user"></i> Profiel</a></li>
+					  <li><a href="../skills.html"><i class="icon-trophy"></i> Vaardigheden</a></li>
+				  </ul>
+				  <div class="nav-collapse collapse"></div>
+			  </div>
+		  </div>
+	  </div>
+	  
+	  <br>
+	  <form action="boodschappenlijst.html">
+    <input type="submit" value="terug">
+    </form><br><br>
+    <div id="id_lijst"></div>
+	  
+	  <script>
+    
+	    function ophalen()
+      {
+        let json_lijst = localStorage.getItem("json_lijst");
+        
+        if (localStorage.length > 0)
+        {
+          if (json_lijst.length !== null)
+          {
+            lijst = JSON.parse (json_lijst);
+            
+            toon();
+            
+          }
+        }
+      }
+      
+      function toon()
+      {
+        let lijst_tekst = "<table><th>artikelnaam----</th><th>hoeveelheid----</th><th>eenheid</th>";
+        
+        for (let i=0; i < lijst.length; i++)
+        {
+
+          lijst_tekst += "<tr><td>"+lijst[i][0]+"</td><td>"+lijst[i][1]+"</td><td>"+lijst[i][2]+"</td></tr>";
+
+        }
+        document.getElementById("id_lijst").innerHTML = lijst_tekst+"</table>";
+      }
+
+	  </script>
+	  
+    <script>ophalen()</script>
+    
+  </body>
+</html>

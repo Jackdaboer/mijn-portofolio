@@ -1,0 +1,99 @@
+<html>
+  
+  
+  <head>
+    <title>priemgetalchecker</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="font/css/fontello.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    
+  </head>
+  
+  
+  <body>
+     <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="../index.html">
+         <!--AANPASSING-->
+          <img src="../img/foto.jpg" alt="" style="width:64px"></a>
+          <ul class="nav nav-collapse pull-right">
+            <li><a href="../index.html" class="active"><i class="icon-user"></i> Profiel</a></li>
+            <li><a href="../skills.html"><i class="icon-trophy"></i> Vaardigheden</a></li>
+           <!--<li><a href="work.html"><i class="icon-picture"></i> Work</a></li>-->
+            <!--<li><a href="resume.html"><i class="icon-doc-text"></i> Resume</a></li>-->
+          </ul>
+          <div class="nav-collapse collapse"></div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+  <input type="number" id="nummer"> <br>
+    
+    
+    <script>
+    
+      function yeet()
+      {
+        let b = 0;
+        let a =document.getElementById("nummer").value;
+        let s= "Dit wordt een getal";
+        a = parseInt(a);
+        if (a > 1000)
+        {
+          s = "Dit getal is te groot.";
+          //alert("Dit getal is te groot");
+          document.getElementById("id_r").innerHTML = "Dit getal is te groot."
+          return;
+        }
+        
+        
+        
+        
+        if (a <= 0)
+        {
+          s = "Dit getal is te klein.";
+          //alert("Dit getal is te klein");
+          document.getElementById("id_r").innerHTML = "Dit getal is te klein."
+          return;
+        }
+        else
+          {
+            for (let i=a; i>0; i--)
+            {
+              if (a%i==0)
+              {
+                b++;
+              }
+              if (b>2)
+              {
+                s = "Dit is niet een priemgetal."
+              }
+              else
+              {
+                s = "Dit is een priemgetal."
+              }
+            }
+          }
+        document.getElementById("id_r").innerHTML = s;
+      }
+      
+      
+      
+    </script>
+    
+    <button onclick="yeet()">controle priemgetal</button><br>
+    <label>resultaat:</label><div id="id_r"></div>
+    
+  </body>
+    
+  
+</html>
