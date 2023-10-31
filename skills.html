@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Mini Portfolio | Skills</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="font/css/fontello.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="index.html"><img src="img/foto.jpg" alt="" style="width:64px"></a>
+      <ul class="nav nav-collapse pull-right">
+        <li><a href="index.html"><i class="icon-user"></i> Profiel</a></li>
+        <li><a href="skills.html" class="active"><i class="icon-trophy"></i> Vaardigheden</a></li>
+      </ul>
+      <div class="nav-collapse collapse"></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container skills">
+  <h2>My Skills</h2>
+  <div class="row">
+    <div class="span3">
+      <div class="ps">
+        <h3>T</h3>
+      </div>
+    </div>
+    
+    <div class="span5">
+      <h3>Teakwondo <span>70%</span></h3>
+      <div class="expand-bg"> <span class="expand ps2"> &nbsp; </span> </div>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="span3" onclick="location.href='programmeren.html'">
+      <div class="ai">
+        <h3>P</h3>
+      </div>
+    </div>
+    
+    <div class="span5">
+      <h3>Programmeren <span>40%</span></h3>
+      <div class="expand-bg"> <span class="expand ai2"> &nbsp; </span> </div>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="span3" onclick="location.href='settings.html'">
+      <div class="html">
+        <h3>G</h3>
+      </div>
+    </div>
+
+    <div class="span5">
+      <h3>Game <span>100%</span></h3>
+      <div class="expand-bg"> <span class="expand html2"> &nbsp; </span> </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="row">
+    <div class="span3">
+      <div class="css">
+        <h3>JS</h3>
+      </div>
+    </div>
+    
+    <div class="span5">
+      <h3>Javascript <span>50%</span></h3>
+      <div class="expand-bg"> <span class="expand css2"> &nbsp; </span> </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="row">
+   <div class="span3" onclick="location.href='https://youtu.be/G7r4NV1dqaI?si=J9--wEJvUbs_pK0k'">
+      <div class="vo">
+        <h3>P</h3>
+      </div>
+    </div>
+  
+   <div class="span5">
+      <h3>Video Opdracht <span>50%</span></h3>
+     <div class="expand-bg"> <span class="expand vo2"> &nbsp; </span> </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row social">
+  <ul class="social-icons">
+    <li><a href="https://myaccount.google.com/u/1/profile"><img src="img/go.png" alt=""></a></li>
+  </ul>
+</div>
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel"><i class="icon-mail"></i> Contact Me</h3>
+  </div>
+  <div class="modal-body">
+    <form action="#">
+      <input type="text" placeholder="Yopur Name">
+      <input type="text" placeholder="Your Email">
+      <input type="text" placeholder="Website (Optional)">
+      <textarea rows="3" style="width:80%"></textarea>
+      <br>
+      <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
+    </form>
+  </div>
+</div>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$('#myModal').modal('hidden')
+</script>
+</body>
+</html>
